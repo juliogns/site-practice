@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+/*'a' e 'a:hover' para fazer tudo que for 'a' ter uma interaçãozinha quando o cursor passar por cima*/
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+/*'display flex' para colocar o logo do lado da lista*/
+/*'justify space' espaço ao redor = a metade do espaço entre eles*/
+/*'align center' alinhar verticalmente ao centro*/
+/*'8vh' vh é uma unidade resposiva que se adapta a height, janela do usuário sendo 100vh = tela completa (vw seria width)*/
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+/*'list none' para tirar o formato de lista*/
+/*'display flex' para deixar um do lado do outro*/
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/*'letter-spacing' para espaçamento entre letras*/
+/*'margin-left' para espaçamento entre as palavras*/
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+/*fazer cursor do mouse mudar quando passar por cima */
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px){
+    body{
+    }
+    /*tira a barra de rolagem horizontal*/
+
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    /*como a lista ja ta flex, 'flex-direction: column' para deixar em coluna*/
+    /*'transform' usado para mandar a barra para fora da tela, por que a ideia é que ela apareça ao clicar. isso ira gerar uma barra de rolagem horizontal indesejada. será corrigido no elemento body{} acima*/
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    /*tirado o margin left*/
+    /*opacidade total*/
+
+    .mobile-menu{
+        display: block;
+    }
+    /*ajustar o botão de menu 'func-menu'*/
+}
+/*quando a janela passar de um tamanho especifico (999px) o comando @media será executado alterando para as configurações nele*/
+
+.nav-list.active{
+    transform: translateX(0);
+}
+/*quando nav-list for ativada o transform voltara fazendo ela aparecer na tela. '.active' é uma classe que sera adicionado no codigo em javascript*/
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
