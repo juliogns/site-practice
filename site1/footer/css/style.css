@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fcfcfc;
+}
+/*criado objeto body para definir a cor do fundo*/
+
+footer{
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 40px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*criado objeto footer para ter uma área preta*/
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+/*mencionado a classe footer-content para configuração*/
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+/*mencionado a classe footer-content h3 para configuração*/
+/*capitalize para deixar a primeira letra de toda palavra maiúscula*/
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+/*mencionado a classe footer-content p para configuração*/
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+/*mencionado a classe socials para configuração*/
+
+.socials li{
+    margin: 0 10px;
+}
+/*mencionado a classe socials li para configuração*/
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+/*mencionado a classe socials a para configuração*/
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+/*mencionado a classe socials a i para configuração*/
+
+.socials a:hover i{
+    color: aqua;
+}
+/*mencionado a classe socials a para configuração*/
+/*:hover para referir-se a quando o cursor passar por cima do objeto*/
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 13px 0;
+    text-align: center;
+}
+/*mencionada a classe footer-bottom para configuração*/
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+/*mencionada a classe footer-bottom p para configuração*/
+
+.footer-bottom span a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+/*mencionada a classe footer-bottom span para configuração*/
+/*uppercase para deixar todas letras maiúsculas*/
+/*text-decoration: none, para tirar o sublinho de link*/
