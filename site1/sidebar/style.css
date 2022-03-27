@@ -63,6 +63,7 @@ nav{
 
 @media (max-width: 999px){
     body{
+        overflow-x: hidden;
     }
     /*tira a barra de rolagem horizontal*/
 
