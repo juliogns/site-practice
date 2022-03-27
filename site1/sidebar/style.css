@@ -93,7 +93,7 @@ nav{
     .mobile-menu{
         display: block;
     }
-    /*ajustar o botão de menu 'func-menu'*/
+    /*ajustar o botão de menu 'mobile-menu'*/
 }
 /*quando a janela passar de um tamanho especifico (999px) o comando @media será executado alterando para as configurações nele*/
 
@@ -112,6 +112,8 @@ nav{
         transform: translateX(0);
     }
 }
+/*fazer os topicos do menu aparecerem em fade pelo 'opacity'*/
+/*usar o transform para fazer os topicos vindo da direita*/
 
 .mobile-menu.active .line1{
     transform: rotate(-45deg) translate(-8px, 8px);
@@ -124,3 +126,4 @@ nav{
 .mobile-menu.active .line3{
     transform: rotate(45deg) translate(-5px, -7px);
 }
+/*essas 3 menções e para quando forem ativadas (.active) as linhas de menu, as 3 listras virem 2 na diagona e 1 desaparece, transformando o icone de listinha em icone de X*/
